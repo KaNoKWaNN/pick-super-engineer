@@ -5,17 +5,22 @@ def pick_engineer()
 end
 
 def featureC(search)
-	random_name = pick_engineer() 
-	if search.length >= 3 and search.length < random_name.length
-		 boo_name = random_name.include?(search)
-		if  boo_name == true
-			puts "1. " + random_name
-		else
-			puts " Search not have "
+	engineer_name = IO.readlines("engineers.txt")
+	s= Array.new
+	a=0
+	if search.length >= 3 
+	   for num in (1..engineer_name.length-1)
+		engineers = engineer_name[num]
+		engineer = engineers.include?(search)
+		if  engineer == true
+			s[a] = engineers
+			a = a+1
 		end
-			
-	else
-		puts "Search the name with any minimum 3 character!! " 
+		if num == engineer_name.length-1
+			a =0
+			puts s[rand(s.size)]
+		end
+	   end
 	end
 end
 
