@@ -39,21 +39,6 @@ def featureC(search)
 				puts s[rand(s.size)]
 			end
 	   	end
-		s = Array.new
-		a = 0
-		if search.length >= 3
-			for num in (1..engineer_name.length-1)
-			engineers = engineer_name[num]
-			engineer = engineers.include?(search)
-			if engineer == true
-				s[a] = engineers
-				a = a+1
-			end
-			if num == engineer_name.length-1
-				a =0
-				puts s[rand(s.size)]
-			end
-		end
 	end
 end
 ################### Test Code ########################
