@@ -21,6 +21,8 @@ def featureC(search)
 			puts s[rand(s.size)]
 		end
 	   end
+	else
+		puts " "
 	end
 end
 
